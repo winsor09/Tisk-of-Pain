@@ -33,6 +33,14 @@ public class Enemy : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
+        if (collision.tag == "BULLET")
+        {
+
+            Destroy(gameObject);
+        }
+
     }
+
+   
 }
 

@@ -9,7 +9,7 @@ public class Character : MonoBehaviour
 
     public List<Vector3> teleportLocations = new List<Vector3>();
 
-
+    public GameObject bullet;
     float jump = 20;
     float speed = 10;
     int jumpnum = 0;
@@ -64,7 +64,13 @@ public class Character : MonoBehaviour
 
         rBody.velocity = new Vector3(Mathf.Clamp(velocity.x, -speed, speed), Mathf.Clamp(velocity.y, -jump * 3, jump), 0);
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject obj = Instantiate(bullet, transform.position, Quaternion.identity);
 
+            obj.GetComponent<Rigidbody2D>().velocity = Vector3.up * 13;
+
+        }
 
 
 
@@ -100,22 +106,8 @@ public class Character : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-        /*
-        if (collision.tag == "moving")
-        {
-            collision.GetComponent<Moving_Platforms>().velocity ;
-        }
-        */
+
     }
-    /*
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "bouncy")
-        {
-            rBody.velocity = new Vector3(-rBody.velocity.x * 5, jump, 0);
-            rBody.position = new Vector2(rBody.velocity.x < 0 ? rBody.position.x + .2f : rBody.position.x - .2f, rBody.position.y);
-        }
-    }
-    */
+
 
 }
