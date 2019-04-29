@@ -646,9 +646,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 8fbf7a5c-0559-4657-ab9b-943774e0eb90
+  cloudProjectId: e9a7f785-9372-4a80-bb93-43b8de349df3
   projectName: Tisk-of-Pain
-  organizationId: unity_202092
+  organizationId: franejotwitch
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
