@@ -6,6 +6,8 @@ TagManager:
   tags:
   - start
   - Character
+  - character
+  - Ground
   layers:
   - Default
   - TransparentFX
