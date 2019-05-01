@@ -8,6 +8,7 @@ TagManager:
   - Character
   - character
   - Ground
+  - bullet
   layers:
   - Default
   - TransparentFX

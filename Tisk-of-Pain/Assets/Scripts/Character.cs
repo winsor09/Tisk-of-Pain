@@ -10,8 +10,8 @@ public class Character : MonoBehaviour
     public List<Vector3> teleportLocations = new List<Vector3>();
 
     public GameObject bullet;
-    float jump = 10;
-    float speed = 5;
+    float jump = 7;
+    float speed = 3.5f;
     int jumpnum = 0;
 
     Vector3 velocity = new Vector3(0, 0, 0);
@@ -68,7 +68,7 @@ public class Character : MonoBehaviour
         {
             GameObject obj = Instantiate(bullet, transform.position, Quaternion.identity);
 
-            obj.GetComponent<Rigidbody2D>().velocity = Vector3.up * 13;
+            obj.GetComponent<Rigidbody2D>().velocity = Input.mousePosition;
 
         }
 
@@ -76,11 +76,7 @@ public class Character : MonoBehaviour
 
     }
 
-    public void OnClickteleportButton()
-    {
-        transform.position = teleportLocations[Random.Range(0, teleportLocations.Count)];
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -89,24 +85,6 @@ public class Character : MonoBehaviour
         {
             jumpnum = 0;
         }
-
-        if (collision.tag == "bouncy")
-        {
-            jumpnum = 1;
-        }
-
-
-        if (collision.tag == "bouncy2")
-        {
-            jumpnum = 1;
-        }
-
-        if (collision.tag == "BIGGREENSQUARE")
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-
-
     }
 
 
