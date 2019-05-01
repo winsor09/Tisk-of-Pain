@@ -11,7 +11,7 @@ public class Character : MonoBehaviour
 
     public GameObject bullet;
     float jump = 7;
-    float speed = 3.5f;
+    float speed = 4f;
     int jumpnum = 0;
 
     Vector3 velocity = new Vector3(0, 0, 0);
@@ -64,12 +64,19 @@ public class Character : MonoBehaviour
 
         rBody.velocity = new Vector3(Mathf.Clamp(velocity.x, -speed, speed), Mathf.Clamp(velocity.y, -jump * 3, jump), 0);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             GameObject obj = Instantiate(bullet, transform.position, Quaternion.identity);
 
-            obj.GetComponent<Rigidbody2D>().velocity = Input.mousePosition;
+            obj.GetComponent<Rigidbody2D>().velocity = Vector3.right * 13;
 
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            GameObject obj = Instantiate(bullet, transform.position, Quaternion.identity);
+
+            obj.GetComponent<Rigidbody2D>().velocity = Vector3.left * 13;
         }
 
 
@@ -85,6 +92,7 @@ public class Character : MonoBehaviour
         {
             jumpnum = 0;
         }
+
     }
 
 
