@@ -10,8 +10,8 @@ public class Character : MonoBehaviour
     public List<Vector3> teleportLocations = new List<Vector3>();
 
     public GameObject bullet;
-    float jump = 20;
-    float speed = 10;
+    float jump = 10;
+    float speed = 5;
     int jumpnum = 0;
 
     Vector3 velocity = new Vector3(0, 0, 0);
