@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class Character : MonoBehaviour
 {
 
-
+    public float health = 10f;
     public List<Vector3> teleportLocations = new List<Vector3>();
 
     public GameObject bullet;
@@ -77,6 +77,12 @@ public class Character : MonoBehaviour
             GameObject obj = Instantiate(bullet, transform.position, Quaternion.identity);
 
             obj.GetComponent<Rigidbody2D>().velocity = Vector3.left * 13;
+
+        }
+
+        if (health == 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
 

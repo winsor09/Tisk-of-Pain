@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
-
+    
     Transform Character;
     Vector3 velocity;
     float speed = 70f;
@@ -28,18 +28,19 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.tag == "Character")
+        if (collision.tag == "character")
         {
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            collision.GetComponent<Character>().health--;
         }
 
         if (collision.tag == "bullet")
         {
             num_of_hits++;
+            Destroy(collision.gameObject);
         }
 
-        if (num_of_hits == 5)
+        if (num_of_hits == 15)
         {
             Destroy(gameObject);
         }
