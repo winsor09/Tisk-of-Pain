@@ -8,7 +8,8 @@ public class Enemy : MonoBehaviour
 
     Transform Character;
     Vector3 velocity;
-    float speed = 425f;
+    float speed = 70f;
+    int num_of_hits = 0;
 
     // Use this for initialization
     void Start()
@@ -33,9 +34,13 @@ public class Enemy : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-        if (collision.tag == "BULLET")
+        if (collision.tag == "bullet")
         {
+            num_of_hits++;
+        }
 
+        if (num_of_hits == 5)
+        {
             Destroy(gameObject);
         }
 
