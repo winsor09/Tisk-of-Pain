@@ -9,6 +9,7 @@ TagManager:
   - character
   - Ground
   - bullet
+  - enemy
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - player
+  - bullet
   - 
   - 
   - 
