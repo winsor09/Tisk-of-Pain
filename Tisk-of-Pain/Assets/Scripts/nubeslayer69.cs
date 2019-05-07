@@ -8,7 +8,7 @@ public class nubeslayer69 : MonoBehaviour
 
     Transform Character;
     Vector3 velocity2;
-    float speed2 = 90f;
+    float speed2 = 150f;
     int num_of_hits2 = 0;
 
     // Use this for initialization

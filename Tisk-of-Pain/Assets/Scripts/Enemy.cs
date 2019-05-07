@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
-    
     Transform Character;
     Vector3 velocity;
     float speed = 70f;
