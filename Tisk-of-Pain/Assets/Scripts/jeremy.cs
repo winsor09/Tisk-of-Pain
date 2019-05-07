@@ -31,7 +31,7 @@ public class jeremy : MonoBehaviour
         if (collision.tag == "character")
         {
 
-            collision.GetComponent<Character>().health--;
+            collision.GetComponent<Character>().health = 0;
         }
 
         if (collision.tag == "bullet")

@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
     Transform Character;
     Vector3 velocity;
-    float speed = 70f;
+    float speed = 125f;
     int num_of_hits = 0;
 
     // Use this for initialization
