@@ -1900,14 +1900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 1092784059633742, guid: db90067296b46ab4e86c9c5da452f6a0, type: 2}
   spawn_points:
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
+  - {x: 6485519, y: 2.365886}
 --- !u!4 &818690999
 Transform:
   m_ObjectHideFlags: 0

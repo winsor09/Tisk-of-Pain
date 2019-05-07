@@ -14,7 +14,7 @@ public class Enemy_Spawner : MonoBehaviour {
     void Start () {
 
 
-        spawn_points.Add(new Vector2());
+        ;
 
     }
 	
@@ -26,7 +26,7 @@ public class Enemy_Spawner : MonoBehaviour {
         if (timeLeft >= 3f)
         {
 
-            Vector2 spawn = new Vector2(Random.Range(-8.51f, 8.51f), 5.17f);
+            Vector2 spawn = new Vector2(50,-2.76f);
 
             GameObject obj = Instantiate(enemy, spawn, Quaternion.identity);
 
