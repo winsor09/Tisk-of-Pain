@@ -35,6 +35,19 @@ public class Enemy_Spawner : MonoBehaviour {
             
 
         }
+        
+        if (timeLeft >= 4f)
+        {
+
+            Vector2 spawn2 = new Vector2(50.6f,24.16f );
+
+            GameObject obj = Instantiate(enemy, spawn2, Quaternion.identity);
+
+            timeLeft = 0f;
+
+
+
+        }
 
     }
 }
