@@ -43,6 +43,7 @@ public class jeremy : MonoBehaviour
         if (num_of_hits2 == 70)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
     }
