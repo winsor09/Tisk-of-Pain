@@ -39,7 +39,7 @@ public class Enemy : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if (num_of_hits == 15)
+        if (num_of_hits == 8)
         {
             Destroy(gameObject);
         }

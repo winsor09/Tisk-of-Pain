@@ -40,7 +40,7 @@ public class nubeslayer69 : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if (num_of_hits2 == 6)
+        if (num_of_hits2 == 5)
         {
             Destroy(gameObject);
         }

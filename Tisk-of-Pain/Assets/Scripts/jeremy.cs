@@ -40,7 +40,7 @@ public class jeremy : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if (num_of_hits2 == 150)
+        if (num_of_hits2 == 70)
         {
             Destroy(gameObject);
         }
